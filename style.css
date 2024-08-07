@@ -1,0 +1,38 @@
+body{
+    background-color: green;
+    text-align: center;
+}
+
+h1{
+    font-weight: bold;
+    color: white;
+}
+
+#cards-el, #sum-el, #message-el{
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px; 
+    border-radius: 5px;
+    margin: 10px;
+}
+
+button{
+    background-color: white;
+    color: green;
+    font-weight: bold;
+    padding: 10px 20px; 
+    border: none;
+    
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#new-game-btn{
+    display: none;
+}
+
+#new-card-btn:disabled{
+    background-color: grey;
+    color: white;
+    cursor: not-allowed;
+}
