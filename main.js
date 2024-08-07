@@ -11,15 +11,18 @@ let hasBlackJack = false;
 let startButton = document.getElementById("start-btn");
 let newGameButton = document.getElementById("new-game-btn");
 let newCardButton = document.getElementById("new-card-btn");
-
+let roundNumber = document.getElementById("rounds");
+let round = 0;
 function startGame() {
     console.log("Started");
-    
+    round++;
+    roundNumber.textContent = "Round: " + round;
     renderGame();
 
 }
 
 function renderGame() {
+    roundNumber.textContent = "Round: " + round;
     newGameButton.style.display = "inline";
     startButton.style.display = "none";
     cardsEl.textContent = "Cards: " + cards;
@@ -49,6 +52,7 @@ function newCard() {
     let card = Math.floor(Math.random() * 13) + 1;
     cards.push(card);
     sum += card;
+    round++
     renderGame();
 }
 
@@ -56,6 +60,7 @@ function newGame(){
     cards = [];
     isAlive = true;
     hasBlackJack = false;
+    round = 1;
     message = "";
     startButton.style.display = "inline";
     newGameButton.style.display = "none";
